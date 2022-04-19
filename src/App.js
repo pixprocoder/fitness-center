@@ -12,6 +12,7 @@ import Login from "../src/pages/Register/Login/Login";
 import Register from "../src/pages/Register/Register/Register";
 import RequireAuth from "../src/pages/Register/RequireAuth/RequireAuth";
 import CheckOut from "./pages/CheckOut/CheckOut";
+import NotFound from "../src/pages/Shared/NotFound/NotFound";
 import ServiceDetails from "./pages/ServiceDetails/ServiceDetails";
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
         />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </>
