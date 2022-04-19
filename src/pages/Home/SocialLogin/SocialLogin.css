@@ -1,0 +1,10 @@
+.social-btn{
+    border-radius: 20px;
+    border: 1px solid rebeccapurple;
+    padding: 5px;
+    cursor: pointer;
+}
+.social-btn:hover{
+    background-color: rgb(254, 190, 190);
+   
+}
