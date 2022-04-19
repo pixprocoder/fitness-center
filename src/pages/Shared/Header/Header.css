@@ -22,9 +22,7 @@ nav a{
     cursor: pointer;
    
 }
-.login-btn{
-    width: 100% !important;
-}
+
 .login{
     border: 1px solid red;
     border-radius: 10px;
@@ -45,5 +43,8 @@ nav a{
     .nav-login{
         display: flex;
         flex-direction: column;
+    }
+    .login-btn{
+        width: 100% !important;
     }
 }

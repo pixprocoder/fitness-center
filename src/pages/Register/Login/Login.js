@@ -45,7 +45,7 @@ const Login = () => {
   };
   return (
     <>
-      <div className="w-50 mx-auto">
+      <div className="w-50 mx-auto login-container">
         <h1 className="text-center my-2 text-primary">Please Login</h1>
         <SocialLogin />
         <Form onSubmit={handleSubmit}>

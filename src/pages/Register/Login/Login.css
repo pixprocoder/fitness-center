@@ -21,3 +21,10 @@ input[type=email]:focus,input[type=password]:focus,input[type=text]:focus{
     cursor: pointer;
     color: blue;
 }
+
+@media only screen and (max-width: 600px) {
+
+    .login-container{
+        width: 100% !important;
+    }
+}
