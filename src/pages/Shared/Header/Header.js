@@ -26,12 +26,16 @@ const Header = () => {
         </div>
 
         <div>
-          {user ? (
-            <button onClick={handleLogout}>Logout</button>
-          ) : (
-            <Link to="/Login">Login</Link>
-          )}
           <Link to="/register">Register</Link>
+          {user ? (
+            <span className="logout-btn" onClick={handleLogout}>
+              Logout
+            </span>
+          ) : (
+            <Link className="login" to="/Login">
+              Login
+            </Link>
+          )}
         </div>
       </nav>
     </>
