@@ -10,6 +10,8 @@ import About from "../src/pages/About/About";
 import Contact from "../src/pages/Contact/Contact";
 import Login from "../src/pages/Register/Login/Login";
 import Register from "../src/pages/Register/Register/Register";
+import RequireAuth from "../src/pages/Register/RequireAuth/RequireAuth";
+import CheckOut from "./pages/CheckOut/CheckOut";
 
 function App() {
   return (
@@ -22,6 +24,14 @@ function App() {
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route
+          path="/checkout"
+          element={
+            <RequireAuth>
+              <CheckOut />
+            </RequireAuth>
+          }
+        />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
       </Routes>

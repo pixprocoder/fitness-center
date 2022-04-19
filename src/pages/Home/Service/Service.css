@@ -1,6 +1,15 @@
-.service-container img{
-    height: 200px;
-}
+
 .service-container{
     border: 1px solid red;
+    
+}
+.detail-btn{
+    display: block;
+    width: 50%;
+    margin: auto;
+    border: none;
+    background-color: aqua;
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 5px;
 }

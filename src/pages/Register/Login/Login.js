@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Form } from "react-bootstrap";
+import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
+import auth from "../../../firebase.init";
 import SocialLogin from "../../Home/SocialLogin/SocialLogin";
 import "./Login.css";
 
 const Login = () => {
+  const emailRef = useRef();
+  const passwordRef = useRef();
+  const [signInWithEmailAndPassword, user, loading, error] =
+    useSignInWithEmailAndPassword(auth);
+
   const navigate = useNavigate();
+
+  if (user) {
+    navigate("/home");
+  }
 
   const navigateRegister = () => {
     navigate("/register");
@@ -13,6 +24,9 @@ const Login = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    const email = emailRef.current.value;
+    const password = emailRef.current.value;
+    signInWithEmailAndPassword(email, password);
   };
   return (
     <>
@@ -21,11 +35,19 @@ const Login = () => {
         <SocialLogin />
         <Form onSubmit={handleSubmit}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Control type="email" placeholder="Enter email" />
+            <Form.Control
+              ref={emailRef}
+              type="email"
+              placeholder="Enter email"
+            />
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Control type="password" placeholder="Password" />
+            <Form.Control
+              ref={passwordRef}
+              type="password"
+              placeholder="Password"
+            />
           </Form.Group>
           <button className="d-block mx-auto w-50 login-btn">Login</button>
         </Form>
