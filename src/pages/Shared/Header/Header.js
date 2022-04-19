@@ -25,7 +25,7 @@ const Header = () => {
           <Link to="/contact">Contact</Link>
         </div>
 
-        <div>
+        <div className="nav-login">
           <Link to="/register">Register</Link>
           {user ? (
             <span className="logout-btn" onClick={handleLogout}>

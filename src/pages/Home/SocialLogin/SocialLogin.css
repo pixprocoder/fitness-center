@@ -8,3 +8,10 @@
     background-color: rgb(254, 190, 190);
    
 }
+
+@media  only screen and (max-width: 600px) {
+    .social-btn{
+        width: 100%!important;
+    }
+    
+}
