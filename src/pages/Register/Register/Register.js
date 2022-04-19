@@ -19,7 +19,7 @@ const Register = () => {
   if (user) {
     navigate("/home");
   }
-  const handleSubmit = (event) => {
+  const handleRegister = (event) => {
     event.preventDefault();
     const name = nameRef.current.value;
     const email = emailRef.current.value;
@@ -31,7 +31,7 @@ const Register = () => {
     <div className="w-50 mx-auto">
       <h1 className="text-center my-2 text-primary">Please Register</h1>
       <SocialLogin />
-      <Form onSubmit={handleSubmit}>
+      <Form onSubmit={handleRegister}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Control ref={nameRef} type="text" placeholder=" Name" />
         </Form.Group>
@@ -50,7 +50,9 @@ const Register = () => {
         <Form.Group className="mb-3" controlId="formBasicCheckbox">
           <Form.Check type="checkbox" label="Check me out" />
         </Form.Group>
-        <button className="d-block mx-auto w-50 login-btn">Register</button>
+        <button type="submit" className="d-block mx-auto w-50 login-btn">
+          Register
+        </button>
       </Form>
       <p className="mt-2">
         Already have an Account?{" "}
