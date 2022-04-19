@@ -4,6 +4,7 @@ import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
 import SocialLogin from "../../Home/SocialLogin/SocialLogin";
+import Loading from "../../Shared/Loading/Loading";
 import "./Login.css";
 
 const Login = () => {
@@ -16,6 +17,10 @@ const Login = () => {
   let from = location.state?.from?.pathname || "/";
 
   const navigate = useNavigate();
+
+  if (loading) {
+    return <Loading />;
+  }
 
   if (user) {
     navigate(from, { replace: true });
