@@ -8,7 +8,7 @@ import Loading from "../../Shared/Loading/Loading";
 
 const Register = () => {
   const [createUserWithEmailAndPassword, user, loading, error] =
-    useCreateUserWithEmailAndPassword(auth);
+    useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
   const nameRef = useRef();
   const emailRef = useRef();
   const passwordRef = useRef();

@@ -15,13 +15,20 @@ const Login = () => {
     useSignInWithEmailAndPassword(auth);
   const location = useLocation();
   let from = location.state?.from?.pathname || "/";
+  let errorElement;
 
   const navigate = useNavigate();
 
   if (loading) {
     return <Loading />;
   }
-
+  if (error) {
+    errorElement = (
+      <div>
+        <p>Error: {error?.message}</p>
+      </div>
+    );
+  }
   if (user) {
     navigate(from, { replace: true });
   }
@@ -57,6 +64,7 @@ const Login = () => {
               placeholder="Password"
             />
           </Form.Group>
+          <p>{errorElement}</p>
           <button className="d-block mx-auto w-50 login-btn">Login</button>
         </Form>
         <p className="mt-2">
