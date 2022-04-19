@@ -1,7 +1,11 @@
 
 .service-container{
-    border: 1px solid red;
+    border: 1px solid rgb(123, 88, 88);
+    border-radius: 10px;
     
+}
+.service-container img{
+    border-radius: 10px;
 }
 .detail-btn{
     display: block;

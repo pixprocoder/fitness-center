@@ -14,10 +14,10 @@ const Header = () => {
   return (
     <>
       <nav>
-        <div>
+        <div className="nav-logo">
           <Link to="/">THE GYM</Link>
         </div>
-        <div>
+        <div className="nav-item">
           <Link to="/home">Home</Link>
           <Link to="/services">Services</Link>
           <Link to="/blogs">Blogs</Link>

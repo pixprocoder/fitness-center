@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div>
       <footer>
-        <p>
+        <p className="text-center">
           Copyright
           <span dangerouslySetInnerHTML={{ __html: "&copy;" }} />
           {today}
