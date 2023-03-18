@@ -10,7 +10,7 @@ const ServiceDetails = () => {
       <div className="text-center">
         {" "}
         <Link to="/checkout">
-          <button className="d-block mx-auto w-50 login-btn ">Hire me</button>
+          <button className="d-block mx-auto w-50 login-btn ">Book now</button>
         </Link>
       </div>
     </div>
