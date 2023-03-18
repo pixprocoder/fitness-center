@@ -7,7 +7,7 @@ const About = () => {
       <p>
         hello there, <br />
         My name is Samsul kobir. and I am a student. I read in madrasah.I Want
-        to be a web Developer.
+        to be a web Developer. I love to work with web dev
       </p>
     </div>
   );
